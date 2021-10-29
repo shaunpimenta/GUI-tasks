@@ -111,5 +111,7 @@ while (1):
             cv2.rectangle(frame, (x - 5, y - 5), (x + 5, y + 5), (0, 128, 255), -1)
     cv2.imshow('Result', cv2.resize(stacked, None, fx=0.8, fy=0.8))
     k = cv2.waitKey(1) & 0xFF
+    if k == 'q':
+        break
 cv2.destroyAllWindows()
 cap.release()
