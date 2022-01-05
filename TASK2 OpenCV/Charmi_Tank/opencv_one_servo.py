@@ -43,11 +43,16 @@ while True:
 
         # ////////////////////////////////////////////////////////////////////
         if medium_x > center_x +40:
-            Xposition += 2      #for fast tracking change this value
+            Xposition += 2     #for fast tracking change this value
+            if Xposition >= 180: #to avoid random movements
+                Xposition = 180
             ser.write((str(Xposition) + 'a').encode('utf-8'))
+
            # time.sleep(0.03)
         if medium_x < center_x -40:
             Xposition -= 2          #for fast tracking change this value
+            if Xposition < 0:
+                Xposition = 0
             ser.write((str(Xposition) + 'a').encode('utf-8'))
            # time.sleep(0.03)
 
