@@ -1,1 +1,2 @@
 https://www.pyimagesearch.com/2015/12/28/increasing-raspberry-pi-fps-with-python-and-opencv/
+https://picamera.readthedocs.io/en/release-1.2/fov.html
