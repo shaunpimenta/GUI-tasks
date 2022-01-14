@@ -194,7 +194,7 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
         # elif x>int(frame.shape[1] / 2) and y<int(frame.shape[0] / 2)and x>int(frame.shape[1] / 2)+35 and y<int(frame.shape[0]/2)+35:
         #     cv2.putText(img, "Circle is towards extreme top right !!", (75, 105), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 255, 0), 2)
         elif x!=0:
-        cv2.putText(img, "Circle is right in front !!", (75, 105), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 255, 0), 2)
+            cv2.putText(img, "Circle is right in front !!", (75, 105), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 255, 0), 2)
 # ////////////////////////////////////////////////////////////////
     fps = cv2.getTickFrequency() / (cv2.getTickCount() - timer)
 
