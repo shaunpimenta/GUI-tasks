@@ -6,6 +6,7 @@ import math
 import RPi.GPIO as gpio
 from picamera.array import PiRGBArray
 from picamera import PiCamera
+start=time.time()
 camera = PiCamera()
 camera.resolution = (640, 480)
 camera.framerate = 32
@@ -94,7 +95,7 @@ else:
     print('Check colour and retry')
     sys.exit(0)
         
-print('Starting the main loop ... Camera Ready and hsv colours initialized ...')
+print(f'Starting the main loop ... Camera Ready and hsv colours initialized ...\nExecution time taken tilll now {time.time()-start} sec')
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
     frame = frame.array
     frame = cv2.flip(frame, 1)
@@ -204,6 +205,8 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
     key = cv2.waitKey(1)
     if cv2.waitKey(1) & 0xff == ord('q'):
         break
+end=time.time()
+print(f'Total Execution Time {end-start} seconds')
 cv2.destroyAllWindows()
 
 
