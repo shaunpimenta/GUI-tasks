@@ -134,7 +134,7 @@ print(
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
     frame = frame.array
     frame = cv2.flip(frame, 1)
-    frame = cv2.resize(frame, (640, 480))
+    frame = cv2.resize(frame, (480, 320))
     blur = cv2.GaussianBlur(frame, (5, 5), 20)
     hsv = cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
 
