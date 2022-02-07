@@ -1,3 +1,7 @@
+        h = int(frame.shape[0]/2)
+        w = int(frame.shape[1]/2)
+        cv2.line(frame, (w,0),(w,2*h),(0,255,0),2)
+        cv2.line(frame, (0, h), (2*w, h), (0, 255, 0), 2)
         if x < int(frame.shape[1] / 2) - 30 and y < int(frame.shape[0] / 2) - 30:
             print('The circle is in top right ')
             pass #'top right'
