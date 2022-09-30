@@ -1,7 +1,8 @@
 import cv2
 import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
-a = str(input("Enter circle color"))
+a = str(input("Enter circle color: "))
 cap = cv2.VideoCapture(0)
 
 while (1):
@@ -99,6 +100,8 @@ while (1):
             print(r)
             print(f"Center is ({x},{y})")
     cv2.imshow('gray',gray)
+    cv2.imshow('mask',mask)
+    cv2.imshow('mask_3',mask_3)
     # stacking up all three images together
     stacked = np.hstack((mask_3, output, res))
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
