@@ -79,6 +79,7 @@ while True:
         cv2.putText(
             frame, f"Distance = {round(Distance,2)} CM", (50, 50), fonts, 1, (WHITE), 2)
     cv2.imshow("frame", frame)
+    cv2.imshow("original",ref_image2)
     if cv2.waitKey(1) == ord("q"):
         break
 cap.release()
