@@ -185,7 +185,12 @@ class Ui_MainWindow(object):
         self.zeroButton.setText(_translate("MainWindow", "0"))
         self.dotButton.setText(_translate("MainWindow", "."))
         self.equalButton.setText(_translate("MainWindow", "="))
-        self.combButton.setText(_translate("MainWindow", "+/-"))
+        self.combButton.setText(_translate("MainWindow", "+"))
+        self.combButton.setText(_translate("MainWindow", "-"))
+        self.combButton.setText(_translate("MainWindow", "/"))
+        self.combButton.setText(_translate("MainWindow", ","))
+        self.combButton.setText(_translate("MainWindow", "&"))
+        
 
 
 if __name__ == "__main__":
